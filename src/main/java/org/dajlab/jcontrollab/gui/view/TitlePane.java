@@ -1,0 +1,53 @@
+/*
+ * Copyright 2018 Erik Amzallag
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+package org.dajlab.jcontrollab.gui.view;
+
+import org.dajlab.gui.MessagesUtil;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Region;
+
+/**
+ * Title pane.
+ * 
+ * @author Erik Amzallag
+ *
+ */
+public class TitlePane extends GridPane {
+
+	/**
+	 * Constructor.
+	 */
+	public TitlePane() {
+		setAlignment(Pos.CENTER);
+		setHgap(10);
+		setVgap(10);
+		setPadding(new Insets(5));
+		String[] labels = { "ouput", "onOff", "power", "reverse", "workingRange", "stopRange" };
+		Double[] sizes = { 150.0, Region.USE_COMPUTED_SIZE, 200.0, Region.USE_COMPUTED_SIZE, 240.0, 240.0 };
+		int j = 0;
+		for (String label : labels) {
+			Label lab = new Label(MessagesUtil.getString("jcontrollab." + label));
+			lab.setPrefWidth(sizes[j]);
+			add(lab, j, 0);
+
+			j++;
+		}
+	}
+}
