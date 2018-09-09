@@ -5,7 +5,7 @@
 
 	<groupId>org.dajlab</groupId>
 	<artifactId>jcontrollab</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>JControlLab</name>
@@ -126,7 +126,7 @@
 		<dependency>
 			<groupId>org.dajlab</groupId>
 			<artifactId>dajlab-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
